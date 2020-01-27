@@ -1,0 +1,45 @@
+{
+  "name": "@davidlj95/marfeel-js-challenge",
+  "version": "1.0.0",
+  "description": "Marfeel vanilla JS technical test",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "build:watch": "rollup -w -c rollup.config.js",
+    "gitignore": "curl -sq http://gitignore.io/api/vim,node,linux,macos,windows,webstorm+iml > .gitignore && echo build/ >> .gitignore",
+    "start": "concurrently 'browser-sync start --config bs-config.js' 'npm run build:watch'",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlj95/marfeel-js-challenge.git"
+  },
+  "keywords": [
+    "marfeel",
+    "js",
+    "challenge",
+    "d3js"
+  ],
+  "author": "davidlj95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidlj95/marfeel-js-challenge/issues"
+  },
+  "homepage": "https://github.com/davidlj95/marfeel-js-challenge#readme",
+  "dependencies": {
+    "d3": "^5.15.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.1.0",
+    "jasmine-core": "^3.5.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-jasmine": "^3.1.0",
+    "karma-jasmine-html-reporter": "^1.5.1",
+    "karma-rollup-preprocessor": "^7.0.3",
+    "rollup": "^1.30.1"
+  }
+}
